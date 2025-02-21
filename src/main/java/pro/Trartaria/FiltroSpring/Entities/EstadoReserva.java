@@ -7,35 +7,35 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="TipoEspacio")
-public class TipoEspacio {
+@Table(name="EstadoReserva")
+public class EstadoReserva {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
-    private String Tipo;
+    private String Estado;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getTipo() {
-        return Tipo;
+    public String getEstado() {
+        return Estado;
     }
 
-    public void setTipo(String tipo) {
-        Tipo = tipo;
+    public void setEstado(String estado) {
+        Estado = estado;
     }
 
-    public TipoEspacio() {
+    public EstadoReserva() {
     }
 
-    public TipoEspacio(long id, String tipo) {
+    public EstadoReserva(Long id, String estado) {
         this.id = id;
-        Tipo = tipo;
+        Estado = estado;
     }
 }
