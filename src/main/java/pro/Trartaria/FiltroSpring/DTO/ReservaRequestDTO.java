@@ -1,4 +1,4 @@
-package pro.Trartaria.filtroSpring.DTO;
+package pro.Trartaria.FiltroSpring.DTO;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

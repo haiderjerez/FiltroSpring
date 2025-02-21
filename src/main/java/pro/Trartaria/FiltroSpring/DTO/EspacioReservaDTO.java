@@ -1,12 +1,21 @@
-package pro.Trartaria.filtroSpring.DTO;
+package pro.Trartaria.FiltroSpring.DTO;
 
+import java.util.List;
 
-public class EspacioRequestDTO {
+public class EspacioReservaDTO {
+    private Long id;
     private String nombre;
     private String tipo;
     private int capacidad;
     private boolean activo;
+    private List<ReservaDTO> reservas;
     
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
     public String getNombre() {
         return nombre;
     }
@@ -30,6 +39,12 @@ public class EspacioRequestDTO {
     }
     public void setActivo(boolean activo) {
         this.activo = activo;
+    }
+    public List<ReservaDTO> getReservas() {
+        return reservas;
+    }
+    public void setReservas(List<ReservaDTO> reservas) {
+        this.reservas = reservas;
     }
 
     

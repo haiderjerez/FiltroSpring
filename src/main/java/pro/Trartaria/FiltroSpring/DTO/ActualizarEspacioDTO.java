@@ -1,18 +1,10 @@
-package pro.Trartaria.filtroSpring.DTO;
+package pro.Trartaria.FiltroSpring.DTO;
 
-public class EspacioDTO {
-    private Long id;
+public class ActualizarEspacioDTO {
     private String nombre;
     private String tipo;
     private int capacidad;
     private boolean activo;
-    
-    public Long getId() {
-        return id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
     public String getNombre() {
         return nombre;
     }

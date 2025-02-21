@@ -1,4 +1,4 @@
-package pro.Trartaria.filtroSpring.DTO;
+package pro.Trartaria.FiltroSpring.DTO;
 
 public class ApiResponseDTO {
     private String message;

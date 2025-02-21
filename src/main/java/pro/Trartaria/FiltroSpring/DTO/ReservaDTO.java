@@ -1,14 +1,29 @@
-package pro.Trartaria.filtroSpring.DTO;
+package pro.Trartaria.FiltroSpring.DTO;
+
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class ActualizarReservaDTO {
+public class ReservaDTO {
+    private Long id;
+    private Long espacioId;
     private LocalDate fecha;
     private LocalTime horaInicio;
     private LocalTime horaFin;
     private String estado;
     
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public Long getEspacioId() {
+        return espacioId;
+    }
+    public void setEspacioId(Long espacioId) {
+        this.espacioId = espacioId;
+    }
     public LocalDate getFecha() {
         return fecha;
     }
