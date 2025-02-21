@@ -24,9 +24,10 @@ public class EspaciosService {
     public EspaciosRepository guardarEspacio(EspaciosRepository espacios){
         return espaciosRepository.save(espacios);
     }
-    public void eliminarEspacio(Long id){
-        espaciosRepository.deleteById(id);;
-    }
 
+    public String eliminarEspacio(Long id) {
+        espaciosRepository.deleteById(id);
+        return "Espacio eliminado con éxito";
+    }
 }
  

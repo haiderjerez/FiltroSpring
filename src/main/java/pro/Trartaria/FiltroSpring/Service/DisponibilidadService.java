@@ -12,7 +12,7 @@ import pro.Trartaria.FiltroSpring.Repository.DisponibilidadRepository;;
 @Service
 public class DisponibilidadService {
     @Autowired
-    private DisponibilidadRepository disponibilidadRepository;  
+    private DisponibilidadRepository disponibilidadRepository;
 
     public List<Espacios> obtenerTodos(){
         return disponibilidadRepository.findAll();

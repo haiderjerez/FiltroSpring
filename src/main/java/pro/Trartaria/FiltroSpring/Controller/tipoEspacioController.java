@@ -9,30 +9,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import pro.Trartaria.FiltroSpring.Repository.EspaciosRepository;
-import pro.Trartaria.FiltroSpring.Service.EspaciosService;
-
+import pro.Trartaria.FiltroSpring.Service.TipoEspacioService;
 
 @RestController
-@RequestMapping("/espacios")
-public class EspaciosController {
-     
+@RequestMapping("/tipoEspacio")
+public class tipoEspacioController {
     @Autowired
-    private EspaciosService espaciosService;
+    private TipoEspacioService tipoEspacioService;
+
     @RequestMapping
     public List<EspaciosRepository> obtenerTodos(){
-        return espaciosService.obtenerTodos();
-    }
-
+        return tipoEspacioService.obtenerTodos();
+    }   
+    
     @RequestMapping("/{id}")
     public Optional<EspaciosRepository> obtenerPorId(@PathVariable Long id){
-        return espaciosService.obtenerPorId(id);
+        return tipoEspacioService.obtenerPorId(id);
     }
     @RequestMapping("/guardar")
-    public EspaciosRepository guardarEspacio(){
-        return espaciosService.guardarEspacio(null);
+    public EspaciosRepository guardarTipoEspacio(){
+        return (EspaciosRepository) tipoEspacioService.guardarTipoEspacio(null);
     }
     @RequestMapping("/eliminar/{id}")
-    public String eliminarEspacio(@PathVariable Long id){
-        return espaciosService.eliminarEspacio(id);
+    public String eliminarTipoEspacio(@PathVariable Long id){
+        return tipoEspacioService.eliminarTipoEspacio(id);
     }
 }

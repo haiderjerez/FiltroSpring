@@ -18,13 +18,18 @@ public class ReservasService {
     public List<EspaciosRepository> obtenerTodos(){
         return reservasRepository.findAll();
     }
-    public Optional<ReservasRepository> obtenerPorId(Long id){
-        return reservasService.findById(id);
+    
+    public Optional<EspaciosRepository> obtenerPorId(Long id){
+        return reservasRepository.findById(id);
     }
-    public ReservasRepository guardarReserva(ReservasRepository reservas){
-        return reservasService.save(reservas);
+
+    public Reservas guardarReserva(Reservas reservas){
+        return reservasRepository.save(reservas);
     }
-    public void eliminarReserva(Long id){
-        reservasService.deleteById(id);;
+
+    public String eliminarReserva(Long id){
+        reservasRepository.deleteById(id);
+                return null;
     }
 }
+

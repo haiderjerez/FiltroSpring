@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TipoEspacioRepository extends JpaRepository<EspaciosRepository, Long>{
     EspaciosRepository findByTipoAndActivo(String tipo, boolean activo);
+
+    TipoEspacioRepository save(TipoEspacioRepository tipoEspacio);
 }
