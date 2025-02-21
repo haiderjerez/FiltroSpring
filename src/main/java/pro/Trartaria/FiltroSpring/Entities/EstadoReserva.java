@@ -13,7 +13,7 @@ public class EstadoReserva {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Estado;
+    private Boolean Estado;
 
     public Long getId() {
         return id;
@@ -23,18 +23,18 @@ public class EstadoReserva {
         this.id = id;
     }
 
-    public String getEstado() {
+    public Boolean getEstado() {
         return Estado;
     }
 
-    public void setEstado(String estado) {
+    public void setEstado(Boolean estado) {
         Estado = estado;
     }
 
     public EstadoReserva() {
     }
 
-    public EstadoReserva(Long id, String estado) {
+    public EstadoReserva(Long id, Boolean estado) {
         this.id = id;
         Estado = estado;
     }

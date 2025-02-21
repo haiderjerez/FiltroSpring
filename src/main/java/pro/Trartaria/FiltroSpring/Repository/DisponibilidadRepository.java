@@ -7,5 +7,5 @@ import pro.Trartaria.FiltroSpring.Entities.Espacios;
 
 @Repository
 public interface DisponibilidadRepository extends JpaRepository<Espacios, Long>{
-    
+    Espacios findByEspacioAndActivo(String espacio, boolean activo);
 }

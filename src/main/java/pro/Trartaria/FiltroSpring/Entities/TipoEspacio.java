@@ -38,4 +38,5 @@ public class TipoEspacio {
         this.id = id;
         Tipo = tipo;
     }
+
 }
